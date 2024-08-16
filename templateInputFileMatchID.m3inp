@@ -218,7 +218,7 @@ $View as matchidstereo.exe -show "D:\essaisHeterogeneJuillet2024\templateInputFi
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% d_Correlation Treshold
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<Correlation$treshold>=<0.9>
+<Correlation$treshold>=<0.8>
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%% b_Missing data compensation

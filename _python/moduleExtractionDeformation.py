@@ -35,16 +35,18 @@ def extractionDeformation(nomFichierInstructionsMatchID, strainWindow) :
     
     """
 
-    matchIDscript = open('extractionScriptDeformation.mico', "w")
-    matchIDscript.write(matchIDscriptPart1 + '\n')
-
-    # Ajouter la partie relative au nom de la configuration de parametres : 
-    matchIDscript.write(r"DIC_Data = MatchID.LoadData({" + '"' +  nomFichierInstructionsMatchID + '"' + r"})" + "\n")
     
     # Ecrire la commande pour le calul des deformation : 
     # -> Boucle pour faire le calcul pour les deux valeurs de deformations : 
     for sw in strainWindow : 
+
+        matchIDscript = open('extractionScriptDeformation.mico', "w")
+        matchIDscript.write(matchIDscriptPart1 + '\n')
+
+        # Ajouter la partie relative au nom de la configuration de parametres : 
+        matchIDscript.write(r"DIC_Data = MatchID.LoadData({" + '"' +  nomFichierInstructionsMatchID + '"' + r"})" + "\n")
         # Creation dossier pour les resultats :
+
         dossierExport = os.path.join(os.getcwd(), '%s-%i' %(nomFichierInstructionsMatchID.replace('.m3inp', ''), sw))
         # print(dossierExport)
         # os.makedirs(dossierExport)
@@ -55,10 +57,10 @@ def extractionDeformation(nomFichierInstructionsMatchID, strainWindow) :
         matchIDscript.write("Strain_Henky_Q4_%i.Export(ExportType.CSV," %sw + r'"' + dossierExport + r'"' + r""", {"exx"; "eyy"; "exy"; "evm"}, {}, {"<Delimiter>=<,>";"<NumericalFormat>=<>";"<CsvHeaderStyle>=<Short>"})""" + '\n' )
 
     matchIDscript.close()
-
+    quit()
     # Lancement de l'extraction : 
     process = subprocess.Popen(["LibGenRes.exe", "extractionScript.mico"])
-    while not os.path.exists(dossierExport + r"\Image_6760_0.tiff")  : 
+    while not os.path.exists(dossierExport + r"\Image_6780_0.tiff")  : 
 
         time.sleep(5)
     time.sleep(2)

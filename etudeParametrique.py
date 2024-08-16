@@ -5,7 +5,7 @@ import numpy as np
 incr_subsetSize = 2
 incr_stepSize= 1
 
-subsetSize = np.arange(29, 43 + incr_subsetSize, incr_subsetSize, dtype = int)
+subsetSize = np.arange(29, 37 + incr_subsetSize, incr_subsetSize, dtype = int)
 stepSize = np.arange(4, 9 + incr_stepSize, incr_stepSize, dtype = int)
 subsetFonctions = {'affine'    : 1,
                    'quadratic' : 3, }
@@ -34,9 +34,9 @@ for subset in subsetSize :
             lancementCorrelation(outputFile,
                                  "MatchIDStereo.exe")
 
-            # os.rmdir(outputFile)
-
             extractionDeformation(outputFile, [5, 7, 9])
 
+            os.rmdir(outputFile)
 
+            quit()
             # print('analyseEnchoche-%i-%i-%s\n' %(subset, step, key))
