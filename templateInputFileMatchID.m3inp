@@ -1,0 +1,384 @@
+*****************************************************************
+**                 MatchID Stereo Input file 2024.2.3          **
+**               ---------------------------------             **
+** Structure of File: <Parameter_name>=<Value>                 **
+** %-symbol indicates that the line is considered as a comment **
+** i_ : integer value required                                 **
+** b_ : boolean value required (true/false)                    **
+** d_ : double value required                                  **
+** s_ : string value required                                  **
+*****************************************************************
+
+
+$Run as matchidstereo.exe "D:\essaisHeterogeneJuillet2024\templateInputFileMatchID.m3inp"
+
+
+$View as matchidstereo.exe -show "D:\essaisHeterogeneJuillet2024\templateInputFileMatchID.m3inp"
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% s_Index of Camera 0: Format _number. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Camera$0$index>=<_0.>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% s_Index of Camera 1: Format _number. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Camera$1$index>=<_1.>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_Camera 0 intrinsic parameters 
+%%%%%% Order: Fx, Fy, Fs, K1, K2, K3, P1, P2, Cx, Cy, Xoffset, Yoffset 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Camera$0$intrinsic>=<18325.6005370789;18326.524267357;-0.0764667869872726;-0.125004934349624;-16.0248790151339;0.523386330480495;0.00025057656672084;3.92596958689285E-06;2044.58337342631;1455.91282499439;0;0>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_Camera 1 intrinsic parameters 
+%%%%%% Order: Fx, Fy, Fs, K1, K2, K3, P1, P2, Cx, Cy, Xoffset, Yoffset 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Camera$1$intrinsic>=<18509.7658700255;18509.4906578062;-0.722176400428058;-0.193324067402609;-10.0483041070504;0.931622260263469;-4.12746065730888E-05;-0.000294412583852235;2015.64218766501;1470.80713264445;0;0>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Number of distortions
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Distortions>=<5>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_Extrinsic stereo parameters 
+%%%%%% Order: Tx, Ty, Tz, Theta, Phi, Psi 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Extrinsic$parameters>=<-73.7826000381906;-0.501987749236662;10.9878877766129;-0.0635770798075043;8.00798078318416;-0.0282812657162853>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% <Deformed$image> = 
+%%%%%% 	 <s_FullPathOfDeformedImage;b_isReferenceImage;i_NumberOfROIs;i_IndexOfROI_1;i_IndexSeed_SAME;s_GuessROI1_SAME;  i_ArrayOfGuessValuesROI1_SAME; s_GuessROI1_CROSS;  i_ArrayOfGuessValuesROI1_CROSS; ...; i_IndexOfROI_N; ...; i_ArrayOfGuessValuesROI1>
+%%%%%% 
+%%%%%% Remarks:
+%%%%%% i_IndexSeed: 0 refers to the InitialSubset. Other indices should comply with the ones in the extra seed list.
+%%%%%% SAME and CROSS refer to the guesses made for the same camera (different load) as for the cross camera (different load + perspective)
+%%%%%% i_ArrayOfGuessValuesROI:
+%%%%%% 	 if (s_GuessROI == SAME/CROSS_None) i_ArrayOfGuessValuesROI should be omitted. 
+%%%%%% 	 if (s_GuessROI == SAME/CROSS_Translation) i_ArrayOfGuessValuesROI= [i_guess_Horizontal;i_guess_Vertical] 
+%%%%%% 	 if (s_GuessROI == SAME/CROSS_Complete) i_ArrayOfGuessValuesROI= [i_guess_H_1; i_guess_V_1; i_guess_H_2; i_guess_V_2;i_guess_H_3; i_guess_V_3] 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0215_0.tiff;True;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0219_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0223_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0227_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0231_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0235_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0239_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0243_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0247_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0251_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0255_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0259_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0263_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0267_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0271_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0275_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0279_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0283_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0287_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0291_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0295_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0299_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0360_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0440_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0520_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0600_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0680_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0760_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0840_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_0920_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1000_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1080_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1160_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1240_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1320_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1400_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1480_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1560_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1640_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1720_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1800_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1880_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_1960_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2040_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2120_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2200_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2280_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2360_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2440_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2520_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2600_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2680_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2760_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2840_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_2920_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3000_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3080_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3160_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3240_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3320_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3400_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3480_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3560_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3640_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3720_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3800_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3880_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_3960_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4040_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4120_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4200_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4280_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4360_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4440_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4520_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4600_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4680_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4760_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4840_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_4920_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5000_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5080_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5160_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5240_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5320_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5400_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5480_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5560_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5640_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5720_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5800_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5880_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_5960_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6040_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6120_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6200_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6280_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6360_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6440_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6520_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6600_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6680_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+<Deformed$image>=<D:\essaisHeterogeneJuillet2024\donneesEssais\Essai2\Image_6760_0.tiff;False;1;0;0;SAME_None;CROSS_None>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Global subset Size [pixels]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Subset$size>=<35>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Global step Size [pixels]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Step$size>=<10>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Correlation Algorithm
+%%%%%%  NSSD = 0, ANSSD = 1,CC=2, ZNCC=4, ZNSSD = 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Correlation>=<5>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Subset Weight
+%%%%%%  Uniform = 0, Gaussian = 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<SubsetWeight>=<0>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Grey value Interpolation
+%%%%%%   Bilinear = 3,  Bicubic = 4, Global Bicubic spline = 5, Local Bicubic spline =6
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Interpolation>=<6>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Global Subset Transformation order
+%%%%%%  rigid = 0, affine = 1, irreg = 2,  quadratic = 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Transformation>=<3>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Stereo Transformation order
+%%%%%%  affine = 0, quadratic = 1, homographic = 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Stereo$Transformation>=<1>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_Convergence precision
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Precision>=<0.001>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Maximum Iterations
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Iterations>=<1000>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_Correlation Treshold
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Correlation$treshold>=<0.9>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_Missing data compensation
+%%%%%% False, True
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Missing$data>=<False>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Estimated Maximal rigid body displacement [pixels] 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Maximal$rigid>=<50>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% s_Estimated Strain (small, medium, large)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Estimated$strain>=<small>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_Large angles between cameras
+%%%%%% False, True
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Large$angles>=<False>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Progress History
+%%%%%% Full Scan = 0, Spatial = 1, Spatial + Update Reference = 2 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<History>=<2>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_IterationBasedIncremental
+%%%%%% False = update every nth file, True = update when iterations exceed threshold
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<IterationBasedIncremental>=<True>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_IncrementIterationThreshold
+%%%%%% update when iterations exceed threshold
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<IncrementIterationThreshold>=<3>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_choice of noise handling
+%%%%%%  None = 0, Averaging = 1, Gaussian = 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Noise>=<2>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Kernel Size Gaussian Smoothing
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Kernel$size>=<5>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% d_Epipolar tolerance
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Epipolar$tolerance>=<5>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Epipolar error
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Epipolar$error>=<10>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_Triangulation of optimization
+%%%%%% False, True
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Triangulation$optimization>=<False>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Number of processors
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Processors>=<24>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_choice of coordinate transformation
+%%%%%%  Central = 0, Best-plane-fit = 1, Camera 0 = 2, Camera 1 = 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Coordinate$transformation>=<3>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_Automatic strain
+%%%%%% False, True
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Automatic$strain>=<False>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Size of strain window [pixels]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Strain$window>=<5>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Point Tolerance (%)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Point$tolerance>=<0>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Strain Convention
+%%%%%% GreenLagrange = 0, LOGEulerAlmansi = 1, Euler = 2, Henky = 3, Biot Reference = 4, Biot Current = 5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Strain$convention>=<1>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Strain Interpolation
+%%%%%% Q4 = 0, Q8 = 1, Q9 = 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Strain$interpolation>=<0>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_Automatic exporting
+%%%%%% False, True
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Automatic$export>=<False>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Exporting format
+%%%%%% standard = 0, matrix = 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Export$format>=<0>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% s_Path of output files
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Output$path>=<D:\essaisHeterogeneJuillet2024\dossierExport>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% i_Data Storage
+%%%%%% Essential = 0, Default = 1, Extended = 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<DataStorage>=<1>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% s_Delimiter
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Delimiter>=<;>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% b_WriteStats
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<StoreStats>=<False>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% <Shape> or <Extensometer>
+%%%%%% <Shape>=
+%%%%%% 	 Rectangle: <0; i_IndexOfROI; b_Type; i_X_UpperLeft; i_Y_UpperLeft; i_Width; i_Height; i_X_InitialSubset; i_Y_InitialSubset;[Optional: i_LocalSubsetSize; i_LocalStepSize; i_LocalShapeFunction]>
+%%%%%% 	 Circle: <1; i_IndexOfROI; b_Type; i_X_Centre; i_Y_Centre; i_Radius; [3 control points] i_X1; i_Y1;i_X2; i_Y2; i_X3; i_Y3; i_X_InitialSubset; i_Y_InitialSubset;[Optional: i_LocalSubsetSize; i_LocalStepSize; i_LocalShapeFunction]>
+%%%%%% 	 Polygon: <2; i_IndexOfROI; b_Type; i_Number_of_control_points; [N control points] i_X1; i_Y1; ... ;i_X_N; i_YN; i_X_InitialSubset; i_Y_InitialSubset; [Optional: i_LocalSubsetSize; i_LocalStepSize; i_LocalShapeFunction]>
+%%%%%% <Extensometer>=
+%%%%%% 	 <3; i_IndexOfROI_Marker1; i_Marker1_X; i_Marker1_Y);i_IndexOfROI_Marker2; i_Marker2_X;i_Marker2_Y; [Optional: i_LocalSubsetSize; i_LocalShapeFunction]>
+%%%%%% 
+%%%%%% Remarks:
+%%%%%% 	 IndexOfROI:  Index of the ROI. Index should comply to the initial guess indices of the deformed images 
+%%%%%% 	 Type:  Cutting = True, Selection = False;
+%%%%%% 	 If Cutting = True, the initialsubset positions can be omitted. 
+%%%%%% 	 LocalSubsetSize/LocalStepSize/LocalShapeFunction can be omitted in the definition above. In that case the global settings are adopted.  Local definitions overrule the global definitions. In that case, ALL of local definitions must be present! 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<Shape>=<2;0;False;17;2761;406;2743;422;2724;445;2712;463;2702;485;2694;513;2692;529;2692;555;2693;577;2702;601;2715;635;2593;681;2395;685;2370;494;2441;366;2783;361;2791;379;2505;580>
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% Number of extra seed points per ROI and their initial locations
+%%%%%% <Seed$Points> = <i_IndexOfROI;i_NumberOfExtraSeeds; i_X1;i_Y1; ... i_XN; i_YN
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
